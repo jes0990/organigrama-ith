@@ -94,17 +94,30 @@ const oficinas = {
         ]
     },
 
-    sistemas: {
-        nombre: "DEPARTAMENTO DE SISTEMAS Y COMPUTACIÓN",
-        titular: "Ioser Ivette Sandoval Vargas",
-        horario: "9:00 AM – 3:00 PM",
-        servicios: [
-            "Gestión académica de ISC",
-            "Supervisión de laboratorios",
-            "Proyectos de software"
-        ]
+ sistemas: {
+    nombre: "DEPARTAMENTO DE SISTEMAS Y COMPUTACIÓN",
+    titular: "Ioset Ivette Sandoval Vargas",
+    horario: "9:00 AM – 3:00 PM",
+    servicios: [
+        "Gestión académica de ISC",
+        "Supervisión de laboratorios",
+        "Proyectos de software"
+    ],
+    laboratorios: {
+        cantidad: 5,
+        descripcion: "Laboratorios destinados exclusivamente a la carrera de Ingeniería en Sistemas Computacionales, organizados por semestres y grupos."
     },
-
+    areas: [
+        "Administración", "Auditoría", "Bases de datos", "Calidad del software",
+        "Contabilidad", "Desarrollo sustentable", "Estadística",
+        "Estructura de datos", "Programación", "Redes",
+        "Sistemas de información", "Investigación de operaciones",
+        "Matemáticas", "Mercadotecnia", "Probabilidad",
+        "Sistemas operativos", "Seminario de ética",
+        "Software de sistemas", "Psicología organizacional",
+        "Taller de investigación", "Tópicos avanzados de bases de datos"
+    ]
+},
     economicas: {
         nombre: "DEPTO. ECONÓMICO ADMINISTRATIVAS",
         titular: "Luis Miguel Velasco Barragán",
