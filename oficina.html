@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Oficina | TecNM Huejutla</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+<!-- ======= HEADER INSTITUCIONAL TECNM ======= -->
+    <header class="header-pro">
+        <div class="header-top">
+            <img src="logo.jpg" alt="TecNM" class="logo-tecnm">
+            <div class="header-textos">
+                <h1>TECNOLÓGICO NACIONAL DE MÉXICO</h1>
+                <h2>CAMPUS HUEJUTLA</h2>
+            </div>
+        </div>
+    </header>
+
+<div class="contenedor-oficina">
+    <div id="contenido" class="oficina-card card-shadow"></div>
+
+    <a class="btn-regresar" href="index.html">← Regresar al Organigrama</a>
+</div>
+
+<script src="oficinas.js"></script>
+<script>
+    // Obtener ID de la oficina desde la URL (?id=xxxx)
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+
+    // Obtener datos de oficinas.js
+    const datos = oficinas[id];
+
+    const div = document.getElementById("contenido");
+
+    if (!datos) {
+        div.innerHTML = `
+            <h2>Oficina no encontrada</h2>
+            <p>No existe información para la oficina solicitada.</p>
+        `;
+    } else {
+        div.innerHTML = `
+            <h2 class="titulo-oficina">${datos.nombre}</h2>
+
+            <p class="linea"><strong>Responsable:</strong> ${datos.titular}</p>
+            <p class="linea"><strong>Horario:</strong> ${datos.horario}</p>
+
+            <h3>Servicios:</h3>
+            <ul class="lista-servicios">
+                ${datos.servicios.map(s => `<li>${s}</li>`).join("")}
+            </ul>
+        `;
+    }
+</script>
+
+</body>
+</html>
